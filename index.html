@@ -30,13 +30,13 @@
         </div>
         <button class="profile__add-button" type="button" aria-label="add info"></button>
       </section>
-      <section class="elements">
+      <section class="elements" aria-label="Photo card">
         <article class="element__card">
           <button class="element__image-add">
             <img class="element__image" src="" alt="">
           </button>
           <div class="element__description">
-            <h2 class="element__name">TRGGGHHH</h2>
+            <h2 class="element__title">TRGGGHHH</h2>
             <button class="element__like" type="button"></button>
           </div>
         </article>
@@ -45,9 +45,23 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
+    <div class="popup popup__opened" id="profilePopupEdit">
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label="close popup edit profile"></button>
+        <form class="popup__form" name="profileEdit">
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <div class="popup__input">
+            <input class="popup__name" id="profileName" type="text" name="profileName">
+            <input class="popup__info" id="profileInfo" type="text" name="profileInfo">
+          </div>
+          <button class="popup__submit" aria-label="save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
   </div>
 
-
+  <script src="/main.js"></script>
 </body>
 
 </html>
