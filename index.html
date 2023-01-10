@@ -45,14 +45,14 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-    <div class="popup popup__opened" id="profilePopupEdit">
+    <div class="popup">
       <div class="popup__container">
         <button class="popup__close" type="button" aria-label="close popup edit profile"></button>
         <form class="popup__form" name="profileEdit">
           <h3 class="popup__title">Редактировать профиль</h3>
           <div class="popup__input">
-            <input class="popup__name" id="profileName" type="text" name="profileName">
-            <input class="popup__info" id="profileInfo" type="text" name="profileInfo">
+            <input class="popup__name"  type="text" name="name">
+            <input class="popup__info"  type="text" name="info">
           </div>
           <button class="popup__submit" aria-label="save" type="submit">Сохранить</button>
         </form>
@@ -61,7 +61,7 @@
 
   </div>
 
-  <script src="/main.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
