@@ -34,3 +34,6 @@ function retrieveFormValue(event) {
 }
 openPopupButtons.addEventListener('click', handleProfileEditButton);
 editForm.addEventListener("submit", retrieveFormValue);
+
+
+
