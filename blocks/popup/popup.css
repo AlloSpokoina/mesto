@@ -1,0 +1,13 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s all;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.active {
+  display: block;
+}

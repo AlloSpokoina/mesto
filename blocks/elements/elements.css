@@ -1,0 +1,9 @@
+.elements {
+  max-width: 880px;
+  margin: 47px auto 67px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 17px;
+}
