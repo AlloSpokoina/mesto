@@ -7,3 +7,23 @@
   row-gap: 20px;
   column-gap: 17px;
 }
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .elements {
+    max-width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+  .elements {
+    max-width: 320px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 36px auto 48px;
+  }
+}
