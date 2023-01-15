@@ -20,7 +20,7 @@ let profileDescription = document.querySelector(".profile__description");
 let profileEditName = document.querySelector(".popup__name");
 let profileEditInfo = document.querySelector(".popup__info");
 
-function handleProfileEditButton () {
+function handleProfileEditButton() {
   openPopup(popupOpen);
   profileEditName.value = profileName.textContent;
   profileEditInfo.value = profileDescription.textContent;
