@@ -1,5 +1,5 @@
 # Проект: Место
-[Посмотреть]()
+[Посмотреть](https://allospokoina.github.io/mesto/)
 
 ---
 
