@@ -1,4 +1,4 @@
-.elements {
+.element {
   max-width: 880px;
   margin: 51px auto 66px;
   display: grid;
@@ -8,7 +8,7 @@
   column-gap: 17px;
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .elements {
+  .element {
     max-width: 768px;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 @media screen and (min-width:320px) and (max-width:767px) {
-  .elements {
+  .element {
     max-width: 320px;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
