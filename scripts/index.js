@@ -17,7 +17,6 @@ function openPopup(popup) {
   profileEditInfo.value = profileDescription.textContent;
 }
 
-
 function retrieveFormValue(event) {
   event.preventDefault();
   profileName.textContent = profileEditName.value;
