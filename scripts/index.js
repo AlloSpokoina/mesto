@@ -1,24 +1,19 @@
 let popupOpen = document.querySelector(".popup");
 let openPopupButtons = document.querySelector(".profile__edit-button");
 let closePopupButtons = document.querySelector('.popup__close');
-
-
-openPopupButtons.addEventListener("click", openPopup);
-closePopupButtons.addEventListener("click", closePopup);
-
-function closePopup() {
-  popupOpen.classList.remove("active");
-}
-
-function openPopup() {
-  popupOpen.classList.add("active");
-}
-
 let editForm = document.querySelector(".popup__form");
 let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
-let profileEditName = document.querySelector(".popup__name");
-let profileEditInfo = document.querySelector(".popup__info");
+let profileEditName = document.querySelector(".popup__input_name");
+let profileEditInfo = document.querySelector(".popup__input_info");
+
+function closePopup(popup) {
+  popupOpen.classList.remove("popup_opened");
+}
+
+function openPopup(popup) {
+  popupOpen.classList.add("popup_opened");
+}
 
 function handleProfileEditButton() {
   openPopup(popupOpen);
@@ -32,6 +27,8 @@ function retrieveFormValue(event) {
   profileDescription.textContent = profileEditInfo.value;
   closePopup(closePopupButtons);
 }
+openPopupButtons.addEventListener("click", openPopup);
+closePopupButtons.addEventListener("click", closePopup);
 openPopupButtons.addEventListener('click', handleProfileEditButton);
 editForm.addEventListener("submit", retrieveFormValue);
 

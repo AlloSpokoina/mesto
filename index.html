@@ -92,13 +92,11 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
+        <button class="popup__close" type="button" aria-label="close popup edit profile"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="profileEdit">
-          <button class="popup__close" type="button" aria-label="close popup edit profile"></button>
-          <h3 class="popup__title">Редактировать профиль</h3>
-          <div class="popup__input">
-            <input class="popup__name" type="text" name="name">
-            <input class="popup__info" type="text" name="info">
-          </div>
+            <input class="popup__input popup__input_name" type="text" name="name">
+            <input class="popup__input popup__input_info" type="text" name="info">
           <button class="popup__submit" aria-label="save" type="submit">Сохранить</button>
         </form>
       </div>
