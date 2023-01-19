@@ -13,13 +13,10 @@ function closePopup(popup) {
 
 function openPopup(popup) {
   popupOpen.classList.add("popup_opened");
-}
-
-function handleProfileEditButton() {
-  openPopup(popupOpen);
   profileEditName.value = profileName.textContent;
   profileEditInfo.value = profileDescription.textContent;
-};
+}
+
 
 function retrieveFormValue(event) {
   event.preventDefault();
@@ -29,7 +26,6 @@ function retrieveFormValue(event) {
 }
 openPopupButtons.addEventListener("click", openPopup);
 closePopupButtons.addEventListener("click", closePopup);
-openPopupButtons.addEventListener('click', handleProfileEditButton);
 editForm.addEventListener("submit", retrieveFormValue);
 
 
