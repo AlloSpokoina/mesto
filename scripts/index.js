@@ -23,6 +23,7 @@ function retrieveFormValue(event) {
   profileDescription.textContent = profileEditInfo.value;
   closePopup(closePopupButtons);
 }
+
 openPopupButtons.addEventListener("click", openPopup);
 closePopupButtons.addEventListener("click", closePopup);
 editForm.addEventListener("submit", retrieveFormValue);
