@@ -7,11 +7,11 @@ let profileDescription = document.querySelector(".profile__description");
 let profileEditName = document.querySelector(".popup__input_name");
 let profileEditInfo = document.querySelector(".popup__input_info");
 
-function closePopup(popup) {
+function closePopup(/*popup*/) {
   popupOpen.classList.remove("popup_opened");
 }
 
-function openPopup(popup) {
+function openPopup(/*popup*/) {
   popupOpen.classList.add("popup_opened");
   profileEditName.value = profileName.textContent;
   profileEditInfo.value = profileDescription.textContent;
@@ -21,7 +21,7 @@ function retrieveFormValue(event) {
   event.preventDefault();
   profileName.textContent = profileEditName.value;
   profileDescription.textContent = profileEditInfo.value;
-  closePopup(closePopupButtons);
+  closePopup(/*closePopupButtons*/);
 }
 
 openPopupButtons.addEventListener("click", openPopup);
