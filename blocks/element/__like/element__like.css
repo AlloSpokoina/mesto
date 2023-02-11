@@ -15,6 +15,15 @@
   opacity: .5;
 }
 
-.element__like.active {
+.element__like_type_active {
   background-image: url(../../../images/addLike.png);
+  width: 22px;
+  border: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding-right: 25px;
+  opacity: 1;
+  transition: opacity .2s ease;
+  cursor: pointer;
 }
