@@ -49,6 +49,24 @@ function retrieveFormCardValue(event) {
   closePopupCard();
 }
 
+openAddCard.onload = function() {
+  let popupCard = document.querySelector("#popupCard");
+  let addElem = (text, src) => {
+      let addNameCard = document.createElement("popup__input_type_card");
+      let addLinkCard = document.createElement("popup__input_type_link");
+      addLinkCard.src = src;
+      div.append(img);
+      addNameCard.textContent = text;
+      div.append(h2);
+      return div;
+  }
+  form.onsubmit = () => {
+      let addNameCard = document.querySelector("#name");
+              let addLinkCard = document.querySelector("#image");
+              document.body.append(addElem(addNameCard.value, addLinkCard.value));
+              return false;
+  }
+}
 openPopupButtons.addEventListener("click", openPopup);
 closePopupButtons.addEventListener("click", closePopup);
 editForm.addEventListener("submit", retrieveFormValue);

@@ -48,7 +48,9 @@ function renderCard({ name, link }) {
   .cloneNode(true);
   cardsElement.querySelector(".element__title").textContent = name;
   cardsElement.querySelector(".element__image").src = link;
-
+  cardsElement.querySelector(".element__like").addEventListener("click", function (evt) {
+    evt.target.classList.toggle("element__like_type_active");
+  })
   elementCards.prepend(cardsElement);
 }
 
@@ -61,18 +63,4 @@ document.querySelector(".element").onclick = function(e) {
   }
   btn.parentElement.remove();
 }
-
-let addLike = elementCards.querySelector(".element__like");
-addLike.addEventListener("click", () => {
- if(addLike.classList.contains("element__like")) {
-  addLike.classList.add("element__like_type_active")
-  addLike.classList.remove("element__like")
- } else {
-  addLike.classList.remove("element__like_type_active")
-  addLike.classList.add("element__like")
- }
-})
-
-
-
 
