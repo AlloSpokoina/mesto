@@ -16,6 +16,6 @@
 }
 
 .element__like_type_active {
-  background-image: url(../../../images/addLike.png);
+  background-image: url(../../../images/AddLikeBlack.svg);
   opacity: 1;
 }
