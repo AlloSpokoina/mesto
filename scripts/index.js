@@ -91,8 +91,8 @@ const createCard = (cardData) => {
 
   return cardElement;}
 
-initialCards.forEach((cardData) => {
-  cardsContainer.append(createCard(cardData));
+initialCards.forEach((cardElement) => {
+  cardsContainer.append(createCard(cardElement));
 });
 
 let popupCard = document.querySelector("#popupCard");
@@ -108,8 +108,8 @@ popupCard.addEventListener('submit', (evt) => {
   evt.target.reset();
   closePopupCard(popupCard);
 });
-const newCard = (cardData) => {
-  cardsContainer.prepend(createCard(cardData));
+const newCard = (cardElement) => {
+  cardsContainer.prepend(createCard(cardElement));
 };
 
 
