@@ -118,8 +118,6 @@ function closePopupCard() {
 
  function openPopupCard() {
   popupCard.classList.add("popup_opened");
-  editNameCard.value = addNameCard.textContent;
-  profileEditInfo.value = profileDescription.textContent;
 }
 
 function retrieveFormCardValue(event) {
