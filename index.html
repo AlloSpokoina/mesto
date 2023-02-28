@@ -49,9 +49,13 @@
       <div class="popup__container">
         <button class="popup__close" type="button" aria-label="close popup edit profile"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form" name="profileEdit">
-          <input class="popup__input popup__input_type_name" type="text" name="name">
-          <input class="popup__input popup__input_type_info" type="text" name="info">
+        <form class="popup__form" name="profileEdit" novalidate>
+          <input class="popup__input popup__input_type_name" type="text" name="name" minlength="2" maxlength="40"
+            placeholder="Имя" id="popupProfileName" required>
+          <span class="popup__error" id="popupProfileName-error"></span>
+          <input class="popup__input popup__input_type_info" type="text" name="info" minlength="2" maxlength="200"
+            placeholder="О себе" id="popupProfileInfo" required>
+          <span class="popup__error" id="popupProfileInfo-error"></span>
           <button class="popup__submit" aria-label="save" type="submit">Сохранить</button>
         </form>
       </div>
@@ -60,11 +64,13 @@
       <div class="popup__container">
         <button class="popup__close" id="popupCloseCard" type="button" aria-label="close popup edit profile"></button>
         <h3 class="popup__title">Новое место</h3>
-        <form class="popup__form" id="editCard" name="addCard">
+        <form class="popup__form" id="editCard" name="addCard" novalidate>
           <input class="popup__input popup__input_type_card" id="cardInputName" type="text" name="name"
-            placeholder="Название">
+            placeholder="Название" minlength="2" maxlength="30" required>
+          <span class="popup__error" id="cardInputName-error"></span>
           <input class="popup__input popup__input_type_link" id="cardInputLink" type="url" name="card"
-            placeholder="Ссылка на изображение">
+            placeholder="Ссылка на изображение" required>
+          <span class="popup__error" id="cardInputLink-error"></span>
           <button class="popup__submit" aria-label="save" type="submit">Сохранить</button>
         </form>
       </div>
@@ -77,8 +83,10 @@
       </div>
     </div>
   </div>
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/cards.js"></script>
   <script src="./scripts/index.js"></script>
+
 
 </body>
 
