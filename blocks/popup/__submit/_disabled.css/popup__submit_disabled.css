@@ -2,4 +2,12 @@
   background-color: transparent;
   color: black;
   opacity: 0.2;
+  margin: 32px 36px 36px;
+  border: 1px solid black;
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+  .popup__submit_disabled {
+  margin: 25px 22px 25px;
+  }
 }

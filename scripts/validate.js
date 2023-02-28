@@ -1,10 +1,10 @@
 const formValidationConfig = {
-    formSelector: ".popup__form",
-    inputSelector: ".popup__input",
-    buttonSelector: ".popup__submit",
-    inactiveButtonClass: "popup__submit_disabled",
-    inputErrorClass: "popup__error",
-    errorClass: "popup__error"
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    buttonSelector: '.popup__submit',
+    inactiveButtonClass: 'popup__submit_disabled',
+    inputErrorClass: 'popup__error',
+    errorClass: 'popup__error'
   };
 
 function disableSubmit(event) {
@@ -13,8 +13,8 @@ function disableSubmit(event) {
   function enableValidation(config) {
     const formList = Array.from(document.querySelectorAll(config.formSelector));
     formList.forEach((form) => {
-      form.addEventListener("submit", disableSubmit);
-      form.addEventListener("input", () => {
+      form.addEventListener('submit', disableSubmit);
+      form.addEventListener('input', () => {
         toggleButton(form, config);
       });
 
@@ -32,7 +32,7 @@ function disableSubmit(event) {
 
     if (input.validity.valid) {
       input.classList.remove(config.errorClass)
-      errorElement.textContent = "";
+      errorElement.textContent = '';
     }
     else {
       input.classList.add(config.errorClass);
@@ -44,14 +44,14 @@ function disableSubmit(event) {
   const isFormValid = form.checkValidity();
 
   buttonSubmit.disabled = !isFormValid;
-  buttonSubmit.classList.toggle("popup__submit_disabled", !isFormValid);
+  buttonSubmit.classList.toggle('popup__submit_disabled', !isFormValid);
 
  }
 
   function addInputListener(form, config) {
     const inputList = Array.from(form.querySelectorAll(config.inputSelector));
     inputList.forEach(function (item) {
-      item.addEventListener("input", (event) => {
+      item.addEventListener('input', (event) => {
         handleFormInput(event, config);
       });
 
