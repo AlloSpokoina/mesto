@@ -15,11 +15,19 @@ function disableSubmit(event) {
     formList.forEach((form) => {
       form.addEventListener('submit', disableSubmit);
       form.addEventListener('input', () => {
-        toggleButton(form, config);
-      });
+  toggleButton(form, config);
+
+  form.addEventListener('reset', () => {
+    setTimeout(() => {
+      toggleButton(form, config);
+    }, 0);
+  });
+
+      })
 
       addInputListener(form, config);
       toggleButton(form, config);
+
     });
   }
 
@@ -44,7 +52,7 @@ function disableSubmit(event) {
   const isFormValid = form.checkValidity();
 
   buttonSubmit.disabled = !isFormValid;
-  buttonSubmit.classList.toggle('popup__submit_disabled', !isFormValid);
+  buttonSubmit.classList.toggle(config.inactiveButtonClass, !isFormValid);
 
  }
 
